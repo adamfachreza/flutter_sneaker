@@ -1,9 +1,8 @@
-import 'cancel_page.dart';
-import 'grey_cancel.dart';
-import 'rate_page.dart';
+import 'package:flutter_sneaker/pages/cancel_page.dart';
+import 'package:flutter_sneaker/pages/grey_cancel.dart';
+import 'package:flutter_sneaker/pages/rate_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 
 class OrderHistory extends StatelessWidget {
   @override

@@ -1,7 +1,5 @@
-import 'package:flutter_sneaker/main.dart';
-
-import 'home_page.dart';
-import 'order_detail.dart';
+import 'package:flutter_sneaker/pages/home_page.dart';
+import 'package:flutter_sneaker/pages/order_details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,39 +16,45 @@ class CartPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
-                  onTap: (){
-                    Navigator.pushReplacement(context, PageRouteBuilder(
-                      pageBuilder: (context, animation1, animation2,) => MyHomePage(),
-                    ),
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation1, animation2) =>
+                            HomePage(),
+                        transitionDuration: Duration(seconds: 0),
+                      ),
                     );
                   },
-                  child: Image.asset('assets/box_left.png',
-                  width: 40,
+                  child: Image.asset(
+                    'assets/box_left.png',
+                    width: 40,
                   ),
                 ),
-                Text('Cart',
-                style: GoogleFonts.montserrat(
-                  color: Color(0xffFFFFFF),
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                Text(
+                  'Cart',
+                  style: GoogleFonts.montserrat(
+                    color: Color(0xffFFFFFF),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Container(
                   width: 40,
-                  height: 40
+                  height: 40,
                   decoration: BoxDecoration(
                     color: Color(0xff2C3545),
                     borderRadius: BorderRadius.circular(13),
-                   ),
-                   child: Column(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
-                       Image.asset(
-                         'assets/checkout_icon.png',
-                         width: 28,
-                       ),
-                     ],
-                   ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/checkout_icon.png',
+                        width: 28,
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
@@ -67,7 +71,8 @@ class CartPage extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Image.asset('assets/product_two.png',
+                    Image.asset(
+                      'assets/product_two.png',
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0, left: 16),

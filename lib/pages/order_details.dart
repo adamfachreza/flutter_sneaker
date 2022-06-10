@@ -1,8 +1,8 @@
-import 'package:flutter_sneaker/pages/order_history.dart';
+import 'package:flutter_sneaker/pages/payment_success.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class GreyCancel extends StatelessWidget {
+class OrderDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,21 +17,9 @@ class GreyCancel extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushReplacement(
-                        context,
-                        PageRouteBuilder(
-                          pageBuilder: (context, animation1, animation2) =>
-                              OrderHistory(),
-                          transitionDuration: Duration(seconds: 0),
-                        ),
-                      );
-                    },
-                    child: Image.asset(
-                      'assets/box_left.png',
-                      width: 40,
-                    ),
+                  Image.asset(
+                    'assets/box_left.png',
+                    width: 40,
                   ),
                   SizedBox(width: 80),
                   Text(
@@ -313,15 +301,24 @@ class GreyCancel extends StatelessWidget {
               height: 47,
               child: TextButton(
                 style: TextButton.styleFrom(
-                    backgroundColor: Color(0xffCFCFCF),
+                    backgroundColor: Color(0xff6C5ECF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     )),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation1, animation2) =>
+                          PaymentSuccess(),
+                      transitionDuration: Duration(seconds: 0),
+                    ),
+                  );
+                },
                 child: Text(
-                  'Cancel Order',
+                  'Checkout',
                   style: GoogleFonts.montserrat(
-                    color: Color(0xff68687A),
+                    color: Color(0xffF8F7FD),
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
